@@ -2,7 +2,7 @@ class Solution {
     public int majorityElement(int[] nums) {
         int count = 0;
         int candidate = 0;
-
+        //Boyer Moore Voting Algorithm
         // Step 1: Find the majority element candidate
         for (int num : nums) {
             if (count == 0) {
