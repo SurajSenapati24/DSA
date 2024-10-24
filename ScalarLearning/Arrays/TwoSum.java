@@ -1,5 +1,4 @@
 package ScalarLearning.Arrays;
-import java.sql.SQLOutput;
 import java.util.*;
 public class TwoSum {
     public static int [] twoSum(int[] array,int target){
