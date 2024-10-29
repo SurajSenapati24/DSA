@@ -5,7 +5,9 @@ public class BuyandSellStocks {
         int profit=0;
         int minimum=Integer.MAX_VALUE;
         for(int i=0;i<prices.length;i++){
-            minimum=Math.min(minimum, prices[i]);
+            if(minimum>prices[i]){
+                minimum=prices[i];
+            }
             profit=Math.max(profit,prices[i]-minimum);
         }
         return profit;
