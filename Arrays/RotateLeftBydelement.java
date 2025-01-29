@@ -32,9 +32,34 @@ public class RotateLeftBydelement {
         reverse(arr, 0, n-1);
         return arr;
     }
+    
+    //Using Arraylist
+    public static void reverseArrayList(ArrayList<Integer> arr, int start, int end){
+        while(start<=end){
+            int temp = arr.get(start);
+            arr.set(start, arr.get(end)); 
+            arr.set(end, temp); 
+            start++;
+            end--;
+        }
+    }
+	public static ArrayList<Integer> rotateArray(ArrayList<Integer> arr, int k) {
+        int n=arr.size();
+        reverseArrayList(arr,0,k-1);
+        reverseArrayList(arr,k,n-1);
+        reverseArrayList(arr,0,n-1);
+        return arr;
+    }
     public static void main(String[] args) {
         int arr[]={1,2,3,4,5};
+        ArrayList<Integer> a=new ArrayList<>();
+        a.add(1);
+        a.add(2);
+        a.add(3);
+        a.add(4);
+        a.add(5);
         //System.out.println(Arrays.toString(brute(arr, 2)));
         System.out.println(Arrays.toString(optimal(arr, 2)));
+        System.out.println(rotateArray(a, 2));
     }
 }
