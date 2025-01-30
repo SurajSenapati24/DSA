@@ -17,6 +17,7 @@ public class MoveAllTheZerosToTheEnd {
         return arr;
     }
     public static void main(String[] args) {
+        //Use case for optimal
         int arr[]={1,0,1,0,2,0,0,3,4,0};
         System.out.println(Arrays.toString(brute(arr)));
     }
