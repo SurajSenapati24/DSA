@@ -16,9 +16,33 @@ public class MoveAllTheZerosToTheEnd {
         }
         return arr;
     }
+    public static int [] optimal(int[] arr){
+        int n=arr.length;
+        int j=-1;
+        for(int i=0;i<n;i++){
+            if(arr[i]==0){
+                j=i;
+                break;
+            }
+        }
+        for(int i=j+1;i<n;i++){
+            if(arr[j]==0){
+                if(arr[i]!=0){
+                    int temp=arr[j];
+                    arr[j]=arr[i];
+                    arr[i]=temp;
+                }else{
+                    continue;
+                }
+            }
+            j++;
+        }
+        return arr;
+    }
     public static void main(String[] args) {
         //Use case for optimal
-        int arr[]={1,0,1,0,2,0,0,3,4,0};
-        System.out.println(Arrays.toString(brute(arr)));
+        int arr[]={1,0,8,0,7,0,0,3,4,10};
+        //System.out.println(Arrays.toString(brute(arr)));
+        System.out.println(Arrays.toString(optimal(arr)));
     }
 }
