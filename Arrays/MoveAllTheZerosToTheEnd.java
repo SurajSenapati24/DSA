@@ -16,28 +16,20 @@ public class MoveAllTheZerosToTheEnd {
         }
         return arr;
     }
-    public static int [] optimal(int[] arr){
-        int n=arr.length;
-        int j=-1;
-        for(int i=0;i<n;i++){
-            if(arr[i]==0){
-                j=i;
-                break;
-            }
-        }
-        for(int i=j+1;i<n;i++){
-            if(arr[j]==0){
-                if(arr[i]!=0){
-                    int temp=arr[j];
-                    arr[j]=arr[i];
-                    arr[i]=temp;
-                }else{
-                    continue;
+    public static int [] optimal(int[] a){
+        int j = 0;
+        int n=a.length;
+        for (int i = 0; i < n; i++) {
+            if (a[i] != 0) {
+                if (i != j) {
+                    int temp = a[j];
+                    a[j] = a[i];
+                    a[i] = temp;
                 }
+                j++;
             }
-            j++;
         }
-        return arr;
+        return a;
     }
     public static void main(String[] args) {
         //Use case for optimal
