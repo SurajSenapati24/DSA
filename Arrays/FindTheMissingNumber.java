@@ -33,10 +33,34 @@ public class FindTheMissingNumber {
         //T.C=O(m+n)
         //S.C=0(n-1)
     }
-    
+    //Sum approach
+    public static int optimal_1(int arr[],int n){
+        int t_sum=(n*(n+1))/2;
+        int sum=0;
+        for(int i=0;i<n-1;i++){
+            sum+=arr[i];
+        }
+        return t_sum-sum;
+        //T.C=O(n)
+        //S.C=O(1)
+    }
+    //XOR approach
+    public static int optimal_2(int arr[],int n){
+        int xor1=0;
+        for(int i=1;i<=n;i++){
+            xor1^=i;
+        }
+        int xor2=0;
+        for(int i=0;i<n-1;i++){
+            xor2^=arr[i];
+        }
+        return xor1^xor2;
+        //T.C=O(n+m)
+        //S.C=O(1)
+    }
     public static void main(String[] args) {
         int arr[]={1,2,4,5};
         int n=5;
-        System.out.println("The missing number in the array is: "+better(arr, n));
+        System.out.println("The missing number in the array is: "+optimal_2(arr, n));
     }
 }
