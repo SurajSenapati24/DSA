@@ -13,7 +13,6 @@ public class SelectionSort {
             arr[i]=arr[minidx];
             arr[minidx]=temp;
         }
-        
     }
     public static void main(String[] args) {
         int arr[] = {99, 2, 34, 1, 46, 8, 4};
