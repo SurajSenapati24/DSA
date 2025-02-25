@@ -1,4 +1,3 @@
-package Arrays;
 import java.util.*;
 public class RotateLeftBydelement {
     static int[] brute(int arr[],int d){

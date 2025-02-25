@@ -1,4 +1,3 @@
-package Arrays;
 public class SecondSmallestElement {
     static int optimal(int arr[]){
         int smallest=arr[0];

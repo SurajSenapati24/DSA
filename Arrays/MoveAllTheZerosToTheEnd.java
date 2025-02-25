@@ -1,4 +1,3 @@
-package Arrays;
 import java.util.*;
 public class MoveAllTheZerosToTheEnd {
     public static int [] brute(int[] arr){

@@ -1,4 +1,3 @@
-package Arrays;
 import java.util.*;
 public class UnionOfTwoSortedArrays {
     public static List<Integer> brute(int a[],int b[]){

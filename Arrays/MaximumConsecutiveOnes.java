@@ -1,4 +1,3 @@
-package Arrays;
 import java.util.*;
 public class MaximumConsecutiveOnes {
     public static int solution(int arr[]){

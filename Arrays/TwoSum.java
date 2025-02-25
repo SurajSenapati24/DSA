@@ -1,4 +1,3 @@
-package Arrays;
 import java.util.*;
 public class TwoSum {
     public static String optimal(int arr[],int target){

@@ -1,4 +1,3 @@
-package Arrays;
 import java.util.*;
 public class FindTheNumberThatAppearOnce {
     public static int brute(int arr[]){

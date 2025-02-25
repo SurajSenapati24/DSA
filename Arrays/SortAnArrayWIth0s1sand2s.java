@@ -1,4 +1,3 @@
-package Arrays;
 import java.util.*;
 public class SortAnArrayWIth0s1sand2s {
     static void swap(int arr[],int a,int b){

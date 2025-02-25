@@ -1,4 +1,3 @@
-package Arrays;
 import java.util.*;
 public class CheckSortedArray {
     static boolean checkSorted(int arr[]){

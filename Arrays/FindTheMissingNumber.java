@@ -1,4 +1,3 @@
-package Arrays;
 import java.util.*;
 public class FindTheMissingNumber {
     public static int brute(int arr[],int n){
