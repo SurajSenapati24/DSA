@@ -48,6 +48,7 @@ public class MaximumSubarraySum {
         }
         return max;
     }
+    //for negative sum as well
     public static int leetcode(int arr[]){
         int sum=0;
         int max=0;
