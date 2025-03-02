@@ -5,7 +5,6 @@ def brute(prices):
         for j in range(i, n):
             profit = max(profit, prices[j] - prices[i])
     return profit  # T.C = O(N^2)
-
 def optimal(prices):
     n = len(prices)
     min_price = prices[0]
@@ -17,7 +16,6 @@ def optimal(prices):
         else:
             min_price = cur
     return profit  # T.C = O(N)
-
 if __name__ == "__main__":
     prices = [17, 20, 11, 9, 12, 6]
     print(brute(prices))  # Testing the brute force approach
