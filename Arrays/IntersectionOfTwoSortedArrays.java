@@ -15,7 +15,6 @@ public class IntersectionOfTwoSortedArrays {
                 }
             }
         }
-        
         return ans;
     }
     public static List<Integer> optimal(int a[],int b[]){
