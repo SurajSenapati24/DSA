@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class LongestSubarrayWithGivenSum {
-    
     // Brute Force: O(n^3)
     public static int brute(int arr[], long k) {
         int n = arr.length;
@@ -19,7 +18,6 @@ public class LongestSubarrayWithGivenSum {
         }
         return len;
     }
-    
     // Optimized Brute Force: O(n^2)
     public static int optimizedBrute(int[] arr, int k) {
         int len = 0;
@@ -32,7 +30,6 @@ public class LongestSubarrayWithGivenSum {
         }
         return len;
     }
-    
     // Optimal Approach: HashMap (O(n))
     public static int optimal(int[] arr, int k) {
         Map<Integer, Integer> prefixSumMap = new HashMap<>();
@@ -54,7 +51,6 @@ public class LongestSubarrayWithGivenSum {
                 prefixSumMap.put(sum, i);
             }
         }
-        
         return maxLength;
     }
     public static int slidingWindow(int[] arr, int k) {
@@ -72,11 +68,8 @@ public class LongestSubarrayWithGivenSum {
                 maxLength = Math.max(maxLength, right - left + 1);
             }
         }
-    
         return maxLength;
     }
-    
-    
     public static void main(String[] args) {
         int arr[] = {1, 2, 3, 1, 1, 1, 2, 4, 2, 1};
         int k = 3;
