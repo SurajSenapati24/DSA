@@ -16,7 +16,8 @@ public class TwoSum {
                 i++;
             }
         }
-        return "NO"; 
+        return "NO";
+        //T.C=O(N)
     }
     public static String better(int arr[],int target){
         int n=arr.length;
@@ -31,6 +32,8 @@ public class TwoSum {
             }
         }
         return "NO";
+        //T.C=O(N)
+        //S.C=O(N)
     }
 
     public static void main(String[] args) {
