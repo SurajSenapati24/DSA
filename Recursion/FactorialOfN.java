@@ -1,4 +1,3 @@
-package Recursion;
 import java.util.*;
 public class FactorialOfN {
     public static int fact(int n){

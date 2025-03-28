@@ -1,5 +1,3 @@
-package Recursion;
-
 public class PrintNameNTimes {
     public static void fun(int n){
         if(n<1) return;

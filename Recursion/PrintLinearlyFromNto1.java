@@ -1,5 +1,3 @@
-package Recursion;
-
 public class PrintLinearlyFromNto1 {
     public static void print_Nto1(int n){
         if(1>n) return;
