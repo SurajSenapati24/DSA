@@ -1,4 +1,3 @@
-import java.util.*;
 public class MagicIndex {
     public static int solution(int arr[],int n){
         for(int i=0;i<n;i++){
