@@ -1,5 +1,3 @@
-package DynamicProgramming;
-
 public class MaxBlockKinderGarten {
     public static int countWays(int[] digits, int target) {
         int[] dp = new int[target + 1];
