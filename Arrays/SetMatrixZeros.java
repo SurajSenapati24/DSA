@@ -1,6 +1,7 @@
 import java.util.*;
 public class SetMatrixZeros{
     //brute force approach
+    //T.C=O(N^3)
     public static void brute(int matrix[][], int n, int m){
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
@@ -33,6 +34,32 @@ public class SetMatrixZeros{
             }
         }
     }
+    //better approach
+    //T.C=O(2xnxm)
+    public static void better(int matrix[][],int n, int m){
+        int rows[]=new int[n];
+        int cols[]=new int[m];
+        Arrays.fill(cols,0);
+        Arrays.fill(rows, 0);
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(matrix[i][j]==0){
+                    rows[i]=1;
+                    cols[j]=1;
+                }
+            }
+        }
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(rows[i]==1 || cols[j]==1){
+                    matrix[i][j]=0;
+                }
+            }
+        }
+    }
+    public static void optimal(int matrix[][], int n, int m){
+        
+    }
     public static void printMatrix(int matrix[][], int n, int m){
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
@@ -42,11 +69,11 @@ public class SetMatrixZeros{
         }
     }
     public static void main(String[] args) {
-        int m1[][]={{1,0,1},{1,1,1}};
+        int m1[][]={{1,0,1,0},{1,1,1,1},{1,1,1,0}};
         int m=m1[0].length;
         int n=m1.length;
         printMatrix(m1, n, m);
-        brute(m1, n, m);
+        better(m1, n, m);
         printMatrix(m1, n, m);
     }
 }
