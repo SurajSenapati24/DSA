@@ -28,6 +28,7 @@ public class PrintMatrixInSpiralManner {
             }
         }
         return ans;
+        //time complexity= O(n*m) Space complexity=O(n*m)
     }
     public static void main(String[] args) {
         int arr[][]={{1,2,3,4,5,6},{20,21,22,23,24,7},{19,32,33,34,25,8},
