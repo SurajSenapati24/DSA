@@ -33,7 +33,7 @@ public class PascalTriangle {
     }
     public static List<List<Long>> optimalPascalTriangle(int n){
         List<List<Long>> ans=new ArrayList<>();
-        for(int i=1;i<n;i++){
+        for(int i=1;i<=n;i++){
             ans.add(generateRow(i));
         }
         return ans;
