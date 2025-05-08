@@ -3,8 +3,8 @@ public class PascalTriangle {
     /*First variant : Given the row and col number print the element  */
     public static long printElementAtRowCol(int row, int col){
         long ans=1;
-        for(int i=1;i<col;i++){
-            ans=ans*(row-i);
+        for(int i=0;i<col-1;i++){
+            ans=ans*(row-1-i);
             ans=ans/(i+1);
         }
         return ans;
