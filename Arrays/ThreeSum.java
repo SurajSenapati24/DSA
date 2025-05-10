@@ -23,8 +23,35 @@ public class ThreeSum {
         }
         return ans;
     }
+    public static List<List<Integer>> better(int nums[]){
+        int n=nums.length;
+        Set<List<Integer>> st=new HashSet<>();
+        for(int i=0;i<n;i++){
+            Set<Integer> temp=new HashSet<>();
+            for(int j=i+1;j<n;j++){
+                int k=-(nums[i]+nums[j]);
+                if(temp.contains(k)){
+                    List<Integer> subans=new ArrayList<>();
+                    subans.add(nums[i]);
+                    subans.add(nums[j]);
+                    subans.add(k);
+                    Collections.sort(subans);
+                    st.add(subans);
+                }
+                else{
+                    temp.add(nums[j]);
+                }
+            }
+        }
+        List<List<Integer>> ans=new ArrayList<>();
+        for(List<Integer> i : st){
+            ans.add(i);
+        }
+        return ans;
+        //T.C=O(N^2)
+    }
     public static void main(String[] args) {
         int nums[]={-1,0,1,2,-1,-4};
-        System.out.println(brute(nums));
+        System.out.println(better(nums));
     }
 }
