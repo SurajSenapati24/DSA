@@ -1,5 +1,19 @@
 import java.util.*;
 public class CountNumberOfSubArraysWithXORasK {
+    public static int optimal(int arr[], int K) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int xor = 0, count = 0;
+        map.put(0, 1);
+        for (int num : arr) {
+            xor ^= num;
+            if (map.containsKey(xor ^ K)) {
+                count += map.get(xor ^ K);
+            }
+            map.put(xor, map.getOrDefault(xor, 0) + 1);
+        }
+        return count;
+        // Time Complexity: O(n)
+    }
     public static int brute(int arr[], int K){
         int  n=arr.length;
         int count=0;
@@ -31,6 +45,6 @@ public class CountNumberOfSubArraysWithXORasK {
     public static void main(String[] args) {
         int arr[]={4,2,2,6,4};
         int k=6;
-        System.out.println(better(arr, k));
+        System.out.println(optimal(arr, k));
     }
 }
