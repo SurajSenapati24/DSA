@@ -18,10 +18,7 @@ public class FourSum {
                 }
             }
         }
-        List<List<Integer>> ans=new ArrayList<>();
-        for(List<Integer> i: st){
-            ans.add(i);
-        }
+        List<List<Integer>> ans=new ArrayList<>(st);
         return ans;
     }
     public static List<List<Integer>> better(int arr[], int target){
@@ -43,10 +40,7 @@ public class FourSum {
                 }
             }
         }
-        List<List<Integer>> ans=new ArrayList<>();
-        for(List<Integer> i: st){
-            ans.add(i);
-        }
+        List<List<Integer>> ans=new ArrayList<>(st);
         return ans;
     }
     public static List<List<Integer>> optimal(int[] nums, int target) {
