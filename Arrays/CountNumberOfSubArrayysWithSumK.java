@@ -17,7 +17,6 @@ public class CountNumberOfSubArrayysWithSumK {
         return count;
         // T.C=O(N^3)
     }
-
     public static int better(int arr[], int K) {
         int n = arr.length;
         int count = 0;
@@ -32,7 +31,6 @@ public class CountNumberOfSubArrayysWithSumK {
         return count;
         // T.C=O(N^2)
     }
-
     public static int optimal(int arr[], int K) {
         int count = 0;
         int preSum = 0;
