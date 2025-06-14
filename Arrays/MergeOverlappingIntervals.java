@@ -19,9 +19,22 @@ public class MergeOverlappingIntervals {
         }
         return res.toArray(new int[res.size()][]);
     }
+    public static int[][] optimal(int intervals[][]){
+        Arrays.sort(intervals,(a,b)-> Integer.compare(a[0],b[0]));
+        LinkedList<int []> ans=new LinkedList<>();
+        for(int interval[]: intervals){
+            if(ans.isEmpty() || ans.getLast()[1] < interval[0]){
+                ans.add(interval);
+            }
+            else{
+                ans.getLast()[1]=Math.max(interval[1],ans.getLast()[1]);
+            }
+        }
+        return ans.toArray(new int[ans.size()][]);
+    }
     public static void main(String[] args) {
         int arr[][]={{1,3},{2,6},{8,10},{15,18}};
-        int ans[][]=brute(arr);
+        int ans[][]=optimal(arr);
         int n=ans.length;
         for(int i=0;i<n;i++){
             System.out.print(Arrays.toString(ans[i])+" ");
