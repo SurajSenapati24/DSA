@@ -1,4 +1,3 @@
-package Graphs;
 import java.util.*;
 public class WeightedGraphImplementationWithAdjacencyMatrix {
     static final int V=5;

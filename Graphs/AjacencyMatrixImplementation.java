@@ -1,4 +1,3 @@
-package Graphs;
 import java.util.*;
 public class AjacencyMatrixImplementation {
     static final int V=5;
