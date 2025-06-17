@@ -1,12 +1,12 @@
 import java.util.*;
 public class DFS {
+    //Using recursion
     public static List<Integer> dfsOfGraph(int V, List<List<Integer>> adj){
         boolean visited[]=new boolean[V];
         List<Integer> dfslist=new ArrayList<>();
         visited[0]=true;
         dfs(0, adj, visited, dfslist);
         return dfslist;
-
     }
     public static void dfs(int node, List<List<Integer>> adj, boolean visited[],List<Integer> dfsList){
         visited[node]=true;
