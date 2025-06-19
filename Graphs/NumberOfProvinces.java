@@ -19,6 +19,7 @@ public class NumberOfProvinces {
             }
         }
         return count;
+        //T.C=O(N*N)
     }
     public static void main(String[] args) {
         int[][] isConnected={{1,0,0},{0,1,0},{0,0,1}};
