@@ -10,11 +10,10 @@ public class DeleteNodeInALL {
     }
     public static void print(ListNode head){
         ListNode temp=head;
-        while(temp.next!=null){
+        while(temp!=null){
             System.out.print(temp.val+" ");
             temp=temp.next;
         }
-        System.out.print(temp.val+" ");
         System.out.println();
     }
     public static void main(String[] args) {
