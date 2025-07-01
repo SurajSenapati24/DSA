@@ -1,4 +1,16 @@
 import java.util.*;
+// class Node{
+//     int data;
+//     Node next;
+//     public Node(int data){
+//         this.data=data;
+//         next=null;
+//     }
+//     public Node(int data, Node next){
+//         this.data=data;
+//         this.next=next;
+//     }
+// }
 public class MiddleOftheLinkedList {
     public static Node arraytoLL(int arr[]){
         Node head=new Node(arr[0]);
