@@ -1,5 +1,16 @@
 import java.util.*;
 public class ReverseALinkedList {
+    public static Node iterativeOptimal(Node head){
+        Node temp=head;
+        Node front=null, prev=null;
+        while(temp!=null){
+            front=temp.next;
+            temp.next=prev;
+            prev=temp;
+            temp=front;
+        }
+        return prev;
+    }
     public static Node brute(Node head){
         Node temp=head;
         Stack<Integer> s=new Stack<>();
@@ -35,7 +46,7 @@ public class ReverseALinkedList {
         int arr[]={1,2,3,4,5};
         Node head=arraytoLL(arr);
         traverse(head);
-        brute(head);
+        head=iterativeOptimal(head);
         traverse(head);
     }
 }
