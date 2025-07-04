@@ -1,5 +1,15 @@
 import java.util.*;
 public class ReverseALinkedList {
+    public static Node recursive(Node head){
+        if(head==null || head.next==null){
+            return head;
+        }
+        Node newHead=recursive(head.next);
+        Node front=head.next;
+        front.next=head;
+        head.next=null;
+        return newHead;
+    }
     public static Node iterativeOptimal(Node head){
         Node temp=head;
         Node front=null, prev=null;
@@ -46,7 +56,7 @@ public class ReverseALinkedList {
         int arr[]={1,2,3,4,5};
         Node head=arraytoLL(arr);
         traverse(head);
-        head=iterativeOptimal(head);
+        head=recursive(head);
         traverse(head);
     }
 }
