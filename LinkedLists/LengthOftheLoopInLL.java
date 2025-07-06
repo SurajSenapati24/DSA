@@ -1,6 +1,6 @@
 import java.util.*;
 public class LengthOftheLoopInLL {
-     public static Node hasCycle(Node head){//142
+     public static Node hasCycle(Node head){
         //My solution
         if(head == null || head.next==null) return null;
         Node temp=head;
