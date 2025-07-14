@@ -1,7 +1,10 @@
 import java.util.*;
 public class DividetwoNumberswithoutusingslashandmod {
     public static int divide(int dividend, int divisor) {
+<<<<<<< HEAD
         
+=======
+>>>>>>> 85c824caa7cdfaf8866e55e2c8402185ec297d34
         if(dividend==0) return 0;
         //The sign will be negative only when the sign of the dividend and divisor will be different
         int sign=((dividend<0)^(divisor<0)) ? -1 : 1;
