@@ -36,9 +36,6 @@ public class LinkedListImplementation {
         }
         temp.next=new Node(val);
     }
-    public static void insertAt(Node head, int val, int position){
-        Node temp=head;
-    }
     public static Node ArraytoLL(int arr[]){
         Node head=new Node(arr[0]);
         Node temp=head;
