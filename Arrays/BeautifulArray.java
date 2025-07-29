@@ -1,4 +1,3 @@
-import java.util.*;
 /*Check if arr[i] is divisible by arr[2*i+1] and arr[2*i+2]
  * if for every indices in the array if this case satisfies then return 1 else 0
  */

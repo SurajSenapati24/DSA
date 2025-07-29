@@ -1,4 +1,3 @@
-import java.util.*;
 public class RotateMatrixBy90Degrees {
     public static int[][] brute(int arr[][],int n){
         int ans[][]=new int[n][n];

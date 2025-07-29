@@ -1,4 +1,3 @@
-import java.util.*;
 public class StockBuyAndSell {
     public static int brute(int prices[]){
         int profit=0;

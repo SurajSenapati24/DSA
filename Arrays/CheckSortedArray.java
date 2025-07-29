@@ -1,4 +1,3 @@
-import java.util.*;
 public class CheckSortedArray {
     static boolean checkSorted(int arr[]){
         for(int i=1;i<arr.length;i++){

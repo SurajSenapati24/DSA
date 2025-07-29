@@ -1,4 +1,3 @@
-import java.util.*;
 public class MaximumConsecutiveOnes {
     public static int solution(int arr[]){
         int n=arr.length;

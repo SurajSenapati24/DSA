@@ -1,4 +1,3 @@
-import java.util.*;
 public class RotateImageby90degrees {
     public static int[][] brute(int arr[][]){
         int n=arr.length;
