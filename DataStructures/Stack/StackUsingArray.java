@@ -1,4 +1,3 @@
-package DataStructures.Stack;
 import java.util.*;
 
 class Stack{
