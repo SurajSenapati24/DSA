@@ -27,13 +27,12 @@ public class SumOfSubarrayMinimums {
     }
     public static int optimal(int arr[]){
         int sum=0;
-        int MOD=(int)1e9+7;
         int nse[]=nextSmallerElements(arr);
         int pse[]=previousSmallerElements(arr);
         for(int i=0;i<arr.length;i++){
             int left=i-pse[i];
             int right=nse[i]-i;
-            sum=(sum+(left*right*arr[i]))%MOD;
+            sum=(sum+(left*right*arr[i]));
         }
         return sum;
     }
